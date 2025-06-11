@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shashanka Haldar Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f9fafb;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1000px;
+      background: #ffffff;
+      margin: auto;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .header {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      position: relative;
+    }
+    .profile-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid #1e3a8a;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 30px;
+    }
+    .profile-photo input {
+      position: absolute;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .header-content {
+      flex: 1;
+    }
+    .header h1 {
+      font-size: 40px;
+      font-weight: 700;
+      color: #1e3a8a;
+      margin: 0;
+    }
+    .contact-box {
+      background: #eff6ff;
+      border: 2px solid #3b82f6;
+      padding: 20px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: 20px;
+    }
+    .contact-box div {
+      margin-bottom: 10px;
+    }
+    .contact-box a {
+      color: #1d4ed8;
+      text-decoration: none;
+    }
+    .contact-box a:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .section {
+      margin-top: 40px;
+    }
+    .section-title {
+      font-size: 22px;
+      font-weight: 700;
+      border-left: 6px solid #1e3a8a;
+      padding-left: 12px;
+      margin-bottom: 15px;
+      color: #1e293b;
+    }
+    .box-editable {
+      border: 2px dashed #94a3b8;
+      border-radius: 12px;
+      padding: 20px;
+      background: #f8fafc;
+      margin-bottom: 15px;
+      min-height: 80px;
+    }
+    .upload-box {
+      margin-top: 10px;
+    }
+    .upload-box input {
+      display: block;
+      margin-top: 10px;
+    }
+    button {
+      margin-top: 30px;
+      padding: 12px 30px;
+      background-color: #1d4ed8;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    button:hover {
+      background-color: #1e40af;
+    }
+    @media print {
+      button, input[type="file"] { display: none !important; }
+      .container { box-shadow: none; border-radius: 0; }
+      }
+   
+  </style>
+  <!-- Add Sortable.js and custom styling for editing -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+<style>
+  .draggable { cursor: move; }
+  .editable { outline: none; border: 2px dashed transparent; }
+  .editable:focus { border-color: #3b82f6; background: #f0f9ff; }
+  .section-controls {
+    margin-top: 5px;
+    display: flex;
+    gap: 10px;
+  }
+  .section-controls button {
+    background: #ef4444;
+    color: white;
+    font-size: 12px;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .add-section-btn {
+    margin-top: 20px;
+    background: #10b981;
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+ .section {
+  border: 2px solid #1a237e; /* Deep blue border */
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Optional: soft shadow */
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #1a237e;
+  border-left: 6px solid #1a237e;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.box-editable {
+  background-color: #f1f5fb;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.upload-box input[type="file"] {
+  padding: 5px;
+  border: 2px solid #ccc;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+}
+
+
+</style>
+<style>
+  [draggable="true"] {
+    cursor: move;
+    border: 1px dashed #ccc;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+
+  [contenteditable="true"]:focus {
+    outline: 2px solid #007bff;
+    background-color: #f0f8ff;
+  }
+</style>
+
+
+</head>
+<body>
+ 
+
+<div class="container">
+    <div class="header">
+      <div class="profile-photo">
+        <img src="https://via.placeholder.com/160" alt="Profile Photo" id="profileImg">
+        <input type="file" accept="image/*" onchange="loadPhoto(event)">
+      </div>
+      <div class="header-content" draggable="true">
+  <h1><strong contenteditable="true">SHASHANKA HALDAR</strong></h1>
+ <div class="contact-box">
+  <div draggable="true" contenteditable="true">
+    Email: <a href="mailto:shashankahalder03@gmail.com" target="_blank">shashankahalder03@gmail.com</a>
+  </div>
+  <div draggable="true" contenteditable="true">
+  GitHub: <a href="https://github.com/shashankahalder" target="_blank">github.com/shashankahalder</a>
+</div>
+
+  <div draggable="true" contenteditable="true">
+    LinkedIn: <a href="https://linkedin.com/in/shashankahalder" target="_blank">linkedin.com/in/shashankahalder</a>
+  </div>
+  <div draggable="true" contenteditable="true">
+    Location: Kolkata, West Bengal, India
+  </div>
+  <div draggable="true" contenteditable="true">
+    Phone: <a href="tel:+918240075386">+91-8240075386</a>
+  </div>
+</div>
+</div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">About Myself</div>
+      <div class="box-editable">I am a passionate and dedicated individual, always ready to learn, grow, and take on new challenges.To secure a challenging role in a reputable organization where I can contribute my technical skills, learn continuously, and grow professionally while adding value to the company’s success. I strive to improve my skills every day — technically and professionally. I believe in hard work, smart solutions, and building meaningful connections at the workplace.
+
+      I am not just looking for a job; I am looking for an opportunity to make a difference, learn from every experience, and add value to the organization I become a part of.</div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Education</div>
+      <div class="box-editable">(B.Tech) in Computer Science and Engineering – Indian Institute of Technology (IIT) Bombay
+Science Background | [Month, Year] – Present<br>12th Grade – Science Stream</div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Skills</div>
+      <div class="box-editable">HTML, CSS, JavaScript, React, Node.js, MongoDB, Express.js, Git, SEO , Strong foundation in programming, algorithms, and computer systems.
+
+Actively involved in coding projects, labs, and tech communities.
+
+Continuously developing practical and problem-solving skills.</div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Work Experience</div>
+      <div class="box-editable">Frontend Developer Intern at XYZ Company – Developed responsive e-commerce UI.</div>
+    </div>
+
+    <div class="section">
+  <div class="section-title">Certificates</div>
+  <div class="box-editable">
+    Udemy – Full Stack Web Dev Certificate<br>
+    Apna College MERN Stack Certificate<br>
+    Coursera – AI for Everyone<br>
+    LinkedIn – Generative AI for Beginners<br>
+    AI Career Essentials – Microsoft x LinkedIn<br>
+    AI for India 2.0 – GUVI by IIT Madras<br>
+    Generative AI – NASSCOM
+  </div>
+  <!-- Certificate Upload Section -->
+<div class="upload-box">
+  <label for="certificateFile"><strong>Upload Certificate (PDF or Image):</strong></label>
+  <input type="file" id="certificateFile" accept=".pdf,image/*" onchange="handleCertificateUpload(event)">
+  <div id="certificateDisplay" style="margin-top: 10px;"></div>
+</div>
+
+
+
+    <div class="section">
+      <div class="section-title">Awards and Achievements</div>
+      <div class="box-editable">Top 5 Finalist in Apna College Hackathon 2024<br>Certificate of Merit in School Olympiad<br>Recognized as a Rising Developer in a Local Tech Meetup</div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Languages Known</div>
+      <div class="box-editable">English, Hindi, Bengali</div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Hobbies</div>
+      <div class="box-editable">Reading, Playing Chess, Exploring Tech Tools</div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Additional Information</div>
+      <div class="box-editable">Open to remote internships and passionate about AI projects.</div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Message to HR</div>
+      <div class="box-editable">Dear HR, I am excited to start my first job journey. I'm sincere, willing to learn fast, and determined to contribute positively. Please give me a chance — I will prove my dedication and work hard for your company’s growth.</div>
+    </div>
+      <button onclick="window.print()">Download PDF</button>    
+
+  </div>
+  
+
+<script>
+  // Load profile photo
+  function loadPhoto(event) {
+    const reader = new FileReader();
+    reader.onload = function () {
+      document.getElementById('profileImg').src = reader.result;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+  }
+
+  // Load certificate file name
+  function handleCertificateUpload(event) {
+  const file = event.target.files[0];
+  const fileNameDisplay = document.getElementById("fileNameDisplay");
+  const certificateLink = document.getElementById("certificateLink");
+
+  if (file) {
+    fileNameDisplay.textContent = "Selected: " + file.name;
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      certificateLink.href = e.target.result;
+      certificateLink.style.display = "inline-block";
+      certificateLink.textContent = "📄 View Certificate";
+    };
+    reader.readAsDataURL(file);
+  } else {
+    fileNameDisplay.textContent = "";
+    certificateLink.style.display = "none";
+  }
+}
+
+  // Enable editing, drag-and-drop, delete, and add section
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.section').forEach(section => {
+      section.classList.add('draggable');
+
+      const box = section.querySelector('.box-editable');
+      if (box) {
+        box.setAttribute('contenteditable', 'true');
+        box.classList.add('editable');
+      }
+
+      const btnGroup = document.createElement('div');
+      btnGroup.className = 'section-controls';
+
+      const deleteBtn = document.createElement('button');
+      deleteBtn.innerText = 'Delete Section';
+      deleteBtn.onclick = () => section.remove();
+
+      btnGroup.appendChild(deleteBtn);
+      section.appendChild(btnGroup);
+    });
+
+    const addSectionBtn = document.createElement('button');
+    addSectionBtn.className = 'add-section-btn';
+    addSectionBtn.innerText = 'Add New Section';
+    addSectionBtn.onclick = () => {
+      const newSection = document.createElement('div');
+      newSection.className = 'section draggable';
+      newSection.innerHTML = `
+        <div class="section-title" contenteditable="true">New Section</div>
+        <div class="box-editable editable" contenteditable="true">Edit your content here...</div>
+        <div class="section-controls">
+          <button onclick="this.closest('.section').remove()">Delete Section</button>
+        </div>
+      `;
+      document.querySelector('.container').appendChild(newSection);
+    };
+    document.querySelector('.container').appendChild(addSectionBtn);
+  });
+
+  // Drag-and-drop basic fallback (not required if Sortable.js works correctly)
+  let dragged;
+  document.addEventListener("dragstart", function (event) {
+    dragged = event.target;
+    event.target.style.opacity = 0.5;
+  });
+  document.addEventListener("dragend", function (event) {
+    event.target.style.opacity = "";
+  });
+  document.addEventListener("dragover", function (event) {
+    event.preventDefault();
+  });
+  document.addEventListener("drop", function (event) {
+    event.preventDefault();
+    if (event.target !== dragged && event.target.parentNode === dragged.parentNode) {
+      let parent = dragged.parentNode;
+      let next = (dragged.nextSibling === event.target) ? dragged : dragged.nextSibling;
+      parent.insertBefore(dragged, event.target);
+      parent.insertBefore(event.target, next);
+    }
+  });
+</script>
+<!-- Add PDF.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+
+<script>
+  async function handleCertificateUpload(event) {
+    const file = event.target.files[0];
+    const display = document.getElementById("certificateDisplay");
+    display.innerHTML = "";
+
+    if (!file) return;
+
+    const fileType = file.type;
+
+    if (fileType.startsWith("image/")) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const img = document.createElement("img");
+        img.src = e.target.result;
+        img.style.maxWidth = "30%";
+        img.style.marginTop = "10px";
+        display.appendChild(img);
+      };
+      reader.readAsDataURL(file);
+    } else if (fileType === "application/pdf") {
+      const fileReader = new FileReader();
+      fileReader.onload = async function () {
+        const typedarray = new Uint8Array(this.result);
+        const pdf = await pdfjsLib.getDocument(typedarray).promise;
+        const page = await pdf.getPage(1);
+
+        const scale = 1.5;
+        const viewport = page.getViewport({ scale });
+
+        const canvas = document.createElement("canvas");
+        const context = canvas.getContext("2d");
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+
+        await page.render({
+          canvasContext: context,
+          viewport: viewport
+        }).promise;
+
+        canvas.style.maxWidth = "30%";
+        canvas.style.marginTop = "10px";
+        display.appendChild(canvas);
+      };
+      fileReader.readAsArrayBuffer(file);
+    } else {
+      display.textContent = "Unsupported file format. Only PDF or image.";
+    }
+  }
+</script>
+  </body>
+</html>
